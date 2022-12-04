@@ -1,8 +1,10 @@
 mod day1;
 mod day2;
+mod day3;
 
 use crate::day1::Day1;
 use crate::day2::Day2;
+use crate::day3::Day3;
 use std::env;
 use std::io::{BufRead, BufReader};
 use std::time::{Duration, Instant};
@@ -37,6 +39,7 @@ fn get_day_solution(day: usize, lines: impl Iterator<Item = String>) -> Box<dyn 
     match day {
         1 => Box::new(Day1::from_lines(lines)),
         2 => Box::new(Day2::from_lines(lines)),
+        3 => Box::new(Day3::from_lines(lines)),
         _other => panic!("Day hasn't been solved yet"),
     }
 }
